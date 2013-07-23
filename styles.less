@@ -1,0 +1,59 @@
+html, body, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+// Colors
+
+@c: 	rgba(103,148,156,1);
+@c2: 	rgba(93,138,146,1);
+@t: 	rgba(73,118,126,1);
+
+::-moz-selection {
+    background: @t;
+    color: @c;
+    text-shadow: none;
+}
+
+::selection {
+    background: @t;
+    color: @c;
+    text-shadow: none;
+}
+
+html {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: @c;
+	background-image:   -moz-radial-gradient(center, ellipse cover, @c 0%, @c2 100%);
+	background-image:   -webkit-radial-gradient(center, ellipse cover, @c 0%, @c2 100%);
+	background-image:   -o-radial-gradient(center, ellipse cover, @c 0%, @c2 100%);
+	background-image:   -ms-radial-gradient(center, ellipse cover, @c 0%, @c2 100%);
+	background-image:   radial-gradient(center, ellipse cover, @c 0%, @c2 100%);
+	filter:             progid:DXImageTransform.Microsoft.gradient(startColorstr = '@c', endColorstr = '@c2', GradientType = 0);
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+section {
+	padding: 40px;
+	
+	h1 {
+		color: @t;
+		font-weight: 400;
+		font-family: Georgia, serif;
+		font-family: "bistro-script-web";
+	}
+}
+
+footer {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+}
